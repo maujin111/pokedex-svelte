@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    h1{
+        @apply 
+        text-4xl 
+        text-center 
+        my-4 uppercase
+    }
+
+    nav{
+        @apply 
+        flex 
+        justify-center
+        w-full
+    }
+
+    nav a {
+        @apply
+        mx-4
+        text-lg
+    }
+}
