@@ -72,4 +72,12 @@
         border-2
         border-red-100
     }
+
+    .pokemon{
+        @apply
+        uppercase
+        flex
+        flex-col
+        items-center
+    }
 }
