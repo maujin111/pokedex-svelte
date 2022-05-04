@@ -1,5 +1,17 @@
 <script>
     import {pokemons} from '../stores/pokestore';
+    import PokemonsCard from '../components/pokemonsCard.svelte';
+
+    let searchTerm = '';
+    let filteredPokemon = [];
+    
+    $: {
+        if(searchTerm){
+            filteredPokemon = $pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()));
+        } else {
+            filteredPokemon = $pokemons;
+        }
+    }
 
 </script>
 
@@ -9,6 +21,10 @@
 
 <h1>POKEDEX</h1>
 
-    {#each $pokemons as pokemon}
-        <p>{pokemon.name}</p>
-    {/each}
+    <input class="searchPokemon" type="text" placeholder="Buscar Pokemon" bind:value={searchTerm}>
+    
+    <div class="pokemonsCardParent">
+        {#each filteredPokemon as pokemon}
+        <PokemonsCard pokemons={pokemon}/>
+        {/each}
+    </div>

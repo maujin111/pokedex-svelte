@@ -2,5 +2,7 @@
     import "../app.css";
     import Nav from "../components/nav.svelte";
 </script>
-<Nav/>
-<slot></slot>
+<div class="container">
+    <Nav/>
+    <slot></slot>
+</div>

@@ -10,6 +10,11 @@
         my-4 uppercase
     }
 
+    h2{
+        @apply
+        uppercase
+    }
+
     nav{
         @apply 
         flex 
@@ -21,5 +26,50 @@
         @apply
         mx-4
         text-lg
+    }
+    
+    
+    .container{
+        @apply
+        p-4
+        max-w-6xl
+        mx-auto
+    }
+
+    .pokemonsCard{
+        @apply
+        p-4
+        bg-gray-100
+        text-gray-800
+        text-center
+        rounded-md
+        shadow-sm
+        hover:shadow-md
+        flex
+        flex-col
+        items-center
+    }
+
+    .pokemonsCardParent{
+        @apply
+        py-4
+        grid
+        gap-4
+        md:grid-cols-6
+        grid-cols-2
+    }
+
+    .pokemonsCardImage{
+        
+    }
+
+    .searchPokemon{
+        @apply
+        w-full
+        rounded-md
+        text-lg
+        p-4
+        border-2
+        border-red-100
     }
 }
